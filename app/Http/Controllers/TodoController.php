@@ -11,11 +11,32 @@ class TodoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    
+    public function index(Request $request)
     {
-        $todos = Todo::all();
+        $sort = $request->get('sort', '');
+
+        switch ($sort) {
+            case 'date_asc':
+                $todos = Todo::orderBy('created_at', 'asc')->get();
+                break;
+            case 'date_desc':
+                $todos = Todo::orderBy('created_at', 'desc')->get();
+                break;
+            case 'priority_asc':
+                $todos = Todo::orderByRaw("FIELD(priority, 'low', 'medium', 'high')")->get();
+                break;
+            case 'priority_desc':
+                $todos = Todo::orderByRaw("FIELD(priority, 'high', 'medium', 'low')")->get();
+                break;
+            default:
+                $todos = Todo::orderBy('created_at', 'desc')->get(); // Varsayılan olarak en yeni en üstte
+                break;
+        }
+
         return view('todos.index', compact('todos'));
     }
+
 
     /**
      * Show the form for creating a new resource.
