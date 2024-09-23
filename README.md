@@ -5,6 +5,6 @@ Features
 Task Management: Add, update, and delete tasks with ease.
 Task Prioritization: Set task priorities (e.g., high, medium, low).
 Task Status: Mark tasks as completed or pending.
-Responsive UI: User-friendly interface with Bootstrap.
+Responsive UI: User-friendly interface built with Bootstrap.
 Authentication: Secure login and registration system for user-specific task management.
 Validation: Form validation to ensure data integrity.
