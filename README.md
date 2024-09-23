@@ -1,12 +1,48 @@
-# Laravel To-Do App
+# To-Do App
 
-This is a simple yet powerful To-Do application built with [Laravel](https://laravel.com/). It allows users to create, update, and manage their daily tasks efficiently.
+This To-Do application is designed to help users manage their daily tasks. Users can add tasks, mark them as complete, and delete them.
 
 ## Features
 
-- **Task Management**: Add, update, and delete tasks with ease.
-- **Task Prioritization**: Set task priorities (e.g., high, medium, low).
-- **Task Status**: Mark tasks as completed or pending.
-- **Responsive UI**: User-friendly interface with Bootstrap.
-- **Authentication**: Secure login and registration system for user-specific task management.
-- **Validation**: Form validation to ensure data integrity.
+- Add tasks
+- Complete tasks
+- Delete tasks
+- User-friendly interface
+
+## Technologies
+
+- **Laravel**: Back-end framework for the web application.
+- **Bootstrap**: CSS framework for responsive design.
+- **JavaScript**: For dynamic features.
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/aydinuygar/Todo-app.git
+2. **Install dependencies:**
+   ```bash
+   cd todo-app
+   composer install
+   npm install
+3. **Create the .env file:**
+   ```bash
+   cp .env.example .env
+4. **Set up the database and run migrations:**
+   ```bash
+   php artisan migrate
+5. **Start the application:**
+   ```bash
+   php artisan serve
+
+## Usage
+- Click the 'Add New Task' button to create a new task.
+- Use the corresponding buttons to edit or delete tasks.
+  
+## Contributors
+ Uygar AYDIN
+
+
+Feel free to modify any parts as needed!
+
+  
